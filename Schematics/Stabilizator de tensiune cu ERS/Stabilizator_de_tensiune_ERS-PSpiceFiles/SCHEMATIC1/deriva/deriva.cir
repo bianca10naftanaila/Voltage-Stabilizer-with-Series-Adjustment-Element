@@ -1,0 +1,26 @@
+** Profile: "SCHEMATIC1-deriva"  [ C:\Users\Bianca\Desktop\P1_2023_431E_Naftanaila_Bianca_Elena_SERS_N16_OrCAD\Schematics\Stabilizator de tensiune cu ERS\stabilizator_de_tensiune_ers-pspicefiles\schematic1\deriva.sim ] 
+
+** Creating circuit file "deriva.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/bianca/desktop/modele_leduri/smls14bet.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/mjd31cg.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Bianca\AppData\Local\Temp\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN TEMP 0 70 1 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END

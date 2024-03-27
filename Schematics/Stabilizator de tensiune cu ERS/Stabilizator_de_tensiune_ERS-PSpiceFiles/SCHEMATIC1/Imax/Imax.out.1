@@ -1,0 +1,90 @@
+
+**** 12/06/23 12:48:30 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Imax"  [ C:\Users\Bianca\Desktop\P1_2023_431E_Naftanaila_Bianca_Elena_SERS_N16_OrCAD\Schematics\Stabilizator
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Imax.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/bianca/desktop/modele_leduri/smls14bet.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/mjd31cg.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Bianca\AppData\Local\Temp\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.DC LIN I1 0 1 0.001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source STABILIZATOR_DE_TENSIUNE_ERS
+X_P1         N165196 N174252 N164904 POT PARAMS: SET=0 VALUE=5k
+R_R4         N164622 N165018  1k TC=0,0 
+R_R12         N164670 N164904  3.3k TC=0,0 
+D_D7         0 N164850 BZX84-C5V1 
+V_VCC         VCC 0 32
+R_R10         N164632 VCC  220 TC=0,0 
+R_R34         N165496 N165626  220 TC=0,0 
+R_R8         N165772 0  220 TC=0,0 
+D_D4         N164622 VCC BZX84-C2V7 
+R_R14         N165018 N165320  1k TC=0,0 
+Q_Q1         N164766 N164766 N164632 QBC807-25 
+R_R11         N164638 VCC  220 TC=0,0 
+R_R2         N164626 VCC  220 TC=0,0 
+Q_Q22         VCC N165326 N165360 QBC817-25 
+Q_Q5         N165188 N165326 N165772 QBC817-25 
+R_RC4         N164368 OUT  0.47 TC=0,0 
+R_R6         OUT N164670  2.7k TC=0,0 
+R_RC2         N164362 N164368  0.47 TC=0,0 
+Q_Q3         N164664 N174252 N165188 QBC817-25 
+R_R28         N1658341 0  150 TC=0,0 
+Q_Q2         N164766 N164850 N165188 QBC817-25 
+R_R29         N165360 N165496  220 TC=0,0 
+R_R9         N165196 N165502  4.7k TC=0,0 
+Q_QESR         VCC N164664 N164470 QBC846B 
+Q_Q19         N164850 N164622 N164626 QBC807-25 
+R_R27         N165502 0  470 TC=0,0 
+R_R30         N165626 N165778  150 TC=0,0 
+Q_Q4         N164664 N164766 N164638 QBC807-25 
+R_RC3         N164368 OUT  0.47 TC=0,0 
+Q_QESR2         VCC N164470 N164348 QMJD31C 
+X_P2         N1658341 N165898 N165778 POT PARAMS: SET=0.5 VALUE=100
+Q_Q20         N164664 N164348 OUT QBC817-25 
+D_D5         0 N165326 BZX84-C2V7 
+R_RC1         N164348 N164362  1 TC=0,0 
+R_R15         N165320 N165326  1k TC=0,0 
+D_D9         VCC N172884 SMLS14BET 
+Q_Q21         N164664 N165898 0 QBC817-25 
+R_RLOAD8         OUT N170705  910 TC=0,0 
+R_RLOAD9         OUT N170709  910 TC=0,0 
+R_RLOAD10         N170709 0  680 TC=0,0 
+R_RLOAD11         N170705 0  680 TC=0,0 
+R_R17         N172884 N172888  910 TC=0,0 
+R_R35         N172888 N173038  910 TC=0,0 
+R_R36         N173038 0  910 TC=0,0 
+
+**** RESUMING Imax.cir ****
+.END
+
+ERROR(ORPSIM-15090): DC device I1 is undefined
+

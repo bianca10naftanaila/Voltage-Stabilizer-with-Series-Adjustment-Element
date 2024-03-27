@@ -1,0 +1,252 @@
+
+**** 12/06/23 12:48:45 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Imax"  [ C:\Users\Bianca\Desktop\P1_2023_431E_Naftanaila_Bianca_Elena_SERS_N16_OrCAD\Schematics\Stabilizator
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Imax.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "c:/users/bianca/desktop/modele_leduri/smls14bet.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc807-25.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc817-25.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bc846b.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bzx84c2v7.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/bzx84c5v1.lib" 
+.LIB "c:/users/bianca/desktop/modele_a1_lib/mjd31cg.lib" 
+* From [PSPICE NETLIST] section of C:\Users\Bianca\AppData\Local\Temp\17.2.0\PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source STABILIZATOR_DE_TENSIUNE_ERS
+X_P1         N165196 N174252 N164904 POT PARAMS: SET=0 VALUE=5k
+R_R4         N164622 N165018  1k TC=0,0 
+R_R12         N164670 N164904  3.3k TC=0,0 
+D_D7         0 N164850 BZX84-C5V1 
+V_VCC         VCC 0 32
+R_R10         N164632 VCC  220 TC=0,0 
+R_R34         N165496 N165626  220 TC=0,0 
+R_R8         N165772 0  220 TC=0,0 
+D_D4         N164622 VCC BZX84-C2V7 
+R_R14         N165018 N165320  1k TC=0,0 
+Q_Q1         N164766 N164766 N164632 QBC807-25 
+R_R11         N164638 VCC  220 TC=0,0 
+R_R2         N164626 VCC  220 TC=0,0 
+Q_Q22         VCC N165326 N165360 QBC817-25 
+Q_Q5         N165188 N165326 N165772 QBC817-25 
+R_RC4         N164368 OUT  0.47 TC=0,0 
+R_R6         OUT N164670  2.7k TC=0,0 
+R_RC2         N164362 N164368  0.47 TC=0,0 
+Q_Q3         N164664 N174252 N165188 QBC817-25 
+R_R28         N1658341 0  150 TC=0,0 
+Q_Q2         N164766 N164850 N165188 QBC817-25 
+R_R29         N165360 N165496  220 TC=0,0 
+R_R9         N165196 N165502  4.7k TC=0,0 
+Q_QESR         VCC N164664 N164470 QBC846B 
+Q_Q19         N164850 N164622 N164626 QBC807-25 
+R_R27         N165502 0  470 TC=0,0 
+R_R30         N165626 N165778  150 TC=0,0 
+Q_Q4         N164664 N164766 N164638 QBC807-25 
+R_RC3         N164368 OUT  0.47 TC=0,0 
+Q_QESR2         VCC N164470 N164348 QMJD31C 
+X_P2         N1658341 N165898 N165778 POT PARAMS: SET=0.5 VALUE=100
+Q_Q20         N164664 N164348 OUT QBC817-25 
+D_D5         0 N165326 BZX84-C2V7 
+R_RC1         N164348 N164362  1 TC=0,0 
+R_R15         N165320 N165326  1k TC=0,0 
+D_D9         VCC N172884 SMLS14BET 
+Q_Q21         N164664 N165898 0 QBC817-25 
+R_RLOAD8         OUT N170705  910 TC=0,0 
+R_RLOAD9         OUT N170709  910 TC=0,0 
+R_RLOAD10         N170709 0  680 TC=0,0 
+R_RLOAD11         N170705 0  680 TC=0,0 
+R_R17         N172884 N172888  910 TC=0,0 
+R_R35         N172888 N173038  910 TC=0,0 
+R_R36         N173038 0  910 TC=0,0 
+
+**** RESUMING Imax.cir ****
+.END
+
+**** 12/06/23 12:48:45 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Imax"  [ C:\Users\Bianca\Desktop\P1_2023_431E_Naftanaila_Bianca_Elena_SERS_N16_OrCAD\Schematics\Stabilizator
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               SMLS14BET       BZX84-C2V7      BZX84-C5V1      
+          IS  405.890000E-24  110.880000E-18    2.666500E-18 
+           N    2.4475           .92657          .82284      
+         ISR                    1.515900E-06  150.400000E-12 
+         IKF     .98529       147.68             .01176      
+          BV                    2.7639          5.176        
+         IBV                     .06977          .10454      
+          RS   15.483            .85899          .51617      
+          TT                   17.889000E-09   43.858000E-09 
+         CJO   38.500000E-12  344.690000E-12  232.290000E-12 
+          VJ     .87273          .72935          .79587      
+           M     .20189          .31964          .35004      
+          EG    2.638                                        
+
+
+**** 12/06/23 12:48:45 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Imax"  [ C:\Users\Bianca\Desktop\P1_2023_431E_Naftanaila_Bianca_Elena_SERS_N16_OrCAD\Schematics\Stabilizator
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QBC807-25       QBC817-25       QBC846B         QMJD31C         
+               PNP             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  108.000000E-15   91.980000E-15   18.220000E-15   90.620200E-12 
+          EG                                                    1.05         
+          BF  385.7           338.8           324.4             3.418700E+03 
+          NF     .99            1.003            .9932          1.17603      
+         VAF   31.29          107.9            82              29.2393       
+         IKF     .3603           .4913           .109            .108267     
+         ISE   27.130000E-15  446.800000E-18  289.400000E-18  537.193000E-09 
+          NE    1.4             1.65            1.4             4            
+          BR   20.57           29.48            8.29          367.353        
+          NR     .9849          1.002            .9931          5            
+         VAR   11.62           25              17.9             1.631        
+         IKR     .054            .193            .09            1.15207      
+         ISC  506.200000E-15    5.109000E-15    9.982000E-12    1.157540E-09 
+          NC    1.295           1.071           1.763           1.49179      
+         ISS    0               0               0               0            
+          RB    1               1              10              22.4853       
+         RBM     .5             1               5               1.000000E-12 
+         IRB    1.000000E-06    1.000000E+03    5.000000E-06    2.209370E-03 
+          RE     .1415           .2126           .649         100.000000E-06 
+          RC     .2623           .143            .7014           .138633     
+         CJE   51.140000E-12   38.250000E-12   12.440000E-12  373.889000E-12 
+         VJE     .8911           .7004           .7579           .67672      
+         MJE     .4417           .364            .3656           .575056     
+         CJC   26.560000E-12   12.700000E-12    3.347000E-12  352.510000E-12 
+         VJC     .62             .4431           .5463           .884306     
+         MJC     .4836           .3983           .391            .473486     
+        XCJC     .459            .4555           .6193           .1          
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+         MJS     .333            .333            .333            .5          
+          FC     .99             .905            .979            .8          
+          TF  735.900000E-12  522.900000E-12  490.800000E-12   10.000000E-09 
+         XTF    1.859         219.7             9.51            3.4926       
+         VTF    3.813           3.502           2.927          12.6615       
+         ITF     .4393          7.257            .3131           .052395     
+          TR   50.000000E-09   70.000000E-12   90.000000E-09    3.298030E-06 
+         XTB                                                  999.997000E-15 
+         XTI                                                    1.000000E-12 
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.42            2.42         
+           D     .52             .87             .87             .87         
+
+
+**** 12/06/23 12:48:45 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Imax"  [ C:\Users\Bianca\Desktop\P1_2023_431E_Naftanaila_Bianca_Elena_SERS_N16_OrCAD\Schematics\Stabilizator
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)    8.2283  (  VCC)   32.0000  (N164348)    8.2468                       
+
+(N164362)    8.2360                   (N164368)    8.2309                       
+
+(N164470)    8.8054                   (N164622)   29.2820                       
+
+(N164626)   29.9150                   (N164632)   30.9810                       
+
+(N164638)   30.9680                   (N164664)    9.3801                       
+
+(N164670)    6.8311                   (N164766)   30.3520                       
+
+(N164850)    5.1187                   (N164904)    5.1234                       
+
+(N165018)   20.4270                   (N165188)    4.4831                       
+
+(N165196)    2.6045                   (N165320)   11.5730                       
+
+(N165326)    2.7180                   (N165360)    2.0998                       
+
+(N165496)    1.5499                   (N165502)     .2368                       
+
+(N165626)     .9999                   (N165772)    2.0578                       
+
+(N165778)     .6250                   (N165898)     .5000                       
+
+(N170705)    3.5190                   (N170709)    3.5190                       
+
+(N172884)   29.0050                   (N172888)   19.3370                       
+
+(N173038)    9.6683                   (N174252)    5.1234                       
+
+(N1658341)     .3750                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_VCC       -5.163E-02
+
+    TOTAL POWER DISSIPATION   1.65E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 12/06/23 12:48:45 ******* PSpice Lite (March 2016) ******* ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Imax"  [ C:\Users\Bianca\Desktop\P1_2023_431E_Naftanaila_Bianca_Elena_SERS_N16_OrCAD\Schematics\Stabilizator
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+
